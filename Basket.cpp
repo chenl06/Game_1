@@ -14,7 +14,7 @@
 Basket::Basket(Game* game)
 	:Actor(game)
 	,mRightSpeed(0.0f)
-	//,mDownSpeed(0.0f) //WSB
+	,mDownSpeed(0.0f) //WSB
 {
 	SpriteComponent* sc = new SpriteComponent(this);
 	sc->SetTexture(game->GetTexture("Assets/basket.png"));
@@ -37,7 +37,17 @@ void Basket::UpdateActor(float deltaTime) //WSB: greatly simplified, as baskets 
 	{
 		pos.x = Game::SCREEN_WIDTH;
 	}
-	pos.y = 460.0f;			//THESE BARE CONSTANTS ARE NOT NICE
+
+	pos.y = 460.0f;
+	if (pos.y < 25.0f)
+	{
+		pos.y = 25.0f;
+	}
+	else if (pos.y > Game::SCREEN_HEIGHT)
+	{
+		pos.y = Game::SCREEN_HEIGHT;
+	}
+	//THESE BARE CONSTANTS ARE NOT NICE
 
 	SetPosition(pos);
 }
@@ -45,6 +55,7 @@ void Basket::UpdateActor(float deltaTime) //WSB: greatly simplified, as baskets 
 void Basket::ProcessKeyboard(const uint8_t* state)
 {
 	mRightSpeed = 0.0f;
+	mDownSpeed = 0.0f;
 
 	// right/left movement
 	if (state[SDL_SCANCODE_D])
@@ -54,5 +65,13 @@ void Basket::ProcessKeyboard(const uint8_t* state)
 	if (state[SDL_SCANCODE_A])
 	{
 		mRightSpeed -= 300.0f;
+	}
+	if (state[SDL_SCANCODE_W])
+	{
+		mRightSpeed -= 300.0f;
+	}
+	if (state[SDL_SCANCODE_S])
+	{
+		mRightSpeed += 300.0f;
 	}
 }

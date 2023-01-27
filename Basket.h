@@ -16,8 +16,8 @@ public:
 	void UpdateActor(float deltaTime) override;
 	void ProcessKeyboard(const uint8_t* state);
 	float GetRightSpeed() const { return mRightSpeed; }
-	//float GetDownSpeed() const { return mDownSpeed; } //WSB
+	float GetDownSpeed() const { return mDownSpeed; } //WSB
 private:
 	float mRightSpeed;
-	//float mDownSpeed; //WSB
+	float mDownSpeed; //WSB
 };
