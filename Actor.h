@@ -9,6 +9,7 @@
 #pragma once
 #include <vector>
 #include "Math.h"
+#include <cstdint>
 class Actor
 {
 public:
@@ -39,6 +40,7 @@ public:
 
 	State GetState() const { return mState; }
 	void SetState(State state) { mState = state; }
+	Vector2 GetForward() const { return Vector2(Math::Cos(mRotation), -Math::Sin(mRotation)); }
 
 	class Game* GetGame() { return mGame; }
 	const class Component* operator[] (unsigned int i) const { return mComponents[i]; } //Editor: shd check for out of bounds

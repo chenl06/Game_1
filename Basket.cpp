@@ -10,11 +10,13 @@
 #include "Basket.h"
 #include "AnimSpriteComponent.h"
 #include "Game.h"
+#include "Ball.h"
 
 Basket::Basket(Game* game)
 	:Actor(game)
 	,mRightSpeed(0.0f)
 	,mDownSpeed(0.0f) //WSB
+	,mColdDown(0.0f)
 {
 	SpriteComponent* sc = new SpriteComponent(this);
 	sc->SetTexture(game->GetTexture("Assets/basket.png"));
@@ -38,7 +40,7 @@ void Basket::UpdateActor(float deltaTime) //WSB: greatly simplified, as baskets 
 		pos.x = Game::SCREEN_WIDTH;
 	}
 
-	pos.y = 460.0f;
+	pos.y += mDownSpeed * deltaTime;
 	if (pos.y < 25.0f)
 	{
 		pos.y = 25.0f;
@@ -47,8 +49,8 @@ void Basket::UpdateActor(float deltaTime) //WSB: greatly simplified, as baskets 
 	{
 		pos.y = Game::SCREEN_HEIGHT;
 	}
-	//THESE BARE CONSTANTS ARE NOT NICE
 
+	mColdDown -= deltaTime;
 	SetPosition(pos);
 }
 
@@ -68,10 +70,16 @@ void Basket::ProcessKeyboard(const uint8_t* state)
 	}
 	if (state[SDL_SCANCODE_W])
 	{
-		mRightSpeed -= 300.0f;
+		mDownSpeed -= 300.0f;
 	}
 	if (state[SDL_SCANCODE_S])
 	{
-		mRightSpeed += 300.0f;
+		mDownSpeed += 300.0f;
+	}
+	if (state[SDL_SCANCODE_SPACE] && mColdDown <= 0.0f) {
+		Ball* ball = new Ball(GetGame());
+		ball->SetPosition(GetPosition());
+		ball->SetRotation(GetRotation());
+		mColdDown = 0.5f;
 	}
 }

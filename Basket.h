@@ -20,4 +20,5 @@ public:
 private:
 	float mRightSpeed;
 	float mDownSpeed; //WSB
+	float mColdDown;
 };

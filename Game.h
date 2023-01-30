@@ -59,4 +59,6 @@ private:
 	class Head*   mHead;	// Current falling head
 	int   headsCaught_ = 0;
 	int   headsMissed_ = 0;
+
+
 };
