@@ -1,4 +1,24 @@
-﻿  Basket.cpp
+﻿  Actor.cpp
+  Ball.cpp
+  CircleComponent.cpp
+  Game.cpp
+C:\Users\luoc459\Desktop\code\Game_1\Game.cpp(103,41): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\luoc459\Desktop\code\Game_1\Game.cpp(108,31): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\luoc459\Desktop\code\Game_1\Game.cpp(108,31): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\luoc459\Desktop\code\Game_1\Game.cpp(108,42): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\luoc459\Desktop\code\Game_1\Game.cpp(108,42): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\luoc459\Desktop\code\Game_1\Game.cpp(111,31): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\luoc459\Desktop\code\Game_1\Game.cpp(111,31): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\luoc459\Desktop\code\Game_1\Game.cpp(111,42): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\luoc459\Desktop\code\Game_1\Game.cpp(111,42): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\luoc459\Desktop\code\Game_1\Game.cpp(117,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\luoc459\Desktop\code\Game_1\Game.cpp(128,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Head.cpp
+  Main.cpp
+C:\Users\luoc459\Desktop\code\Game_1\Main.cpp(15,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Basket.cpp
+  SpriteComponent.cpp
+  Generating Code...
   Game.vcxproj -> C:\Users\luoc459\Desktop\code\Game_1\Debug\Game.exe
   C:\Users\luoc459\Desktop\code\Game_1\\..\external\SDL\lib\win\x86\libfreetype-6.dll
   C:\Users\luoc459\Desktop\code\Game_1\\..\external\SDL\lib\win\x86\libogg-0.dll

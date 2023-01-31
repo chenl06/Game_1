@@ -117,6 +117,23 @@ void Game::UpdateGame()
 		mHead->SetPosition(Vector2(rand() % 640, 25));
 	}
 
+	//Check if bullets catch the head
+	Vector2  headPos = mHead->GetPosition(), ballPos = mball->GetPosition();
+
+	SDL_Rect headRect = { headPos.x, headPos.y, ((SpriteComponent*)(*mHead)[0])->GetTexWidth(),
+												((SpriteComponent*)(*mHead)[0])->GetTexHeight()
+	};
+	SDL_Rect baskRect = { baskPos.x, baskPos.y, ((SpriteComponent*)(*mBasket)[0])->GetTexWidth(),
+												((SpriteComponent*)(*mBasket)[0])->GetTexHeight()
+	};
+	if (SDL_HasIntersection(&headRect, &baskRect)) //Got one!
+	{
+		headsCaught_++;
+		mHead->SetPosition(Vector2(rand() % 640, 25));
+	}
+
+
+
 	//Check for misses -- did I miss a head? -- WSB
 	if (mHead->GetPosition().y > 480)
 	{

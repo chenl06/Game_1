@@ -10,6 +10,7 @@
 #include "Head.h"
 #include "AnimSpriteComponent.h"
 #include "Game.h"
+#include "CircleComponent.h"
 
 Head::Head(Game* game)
 	:Actor(game),
@@ -19,6 +20,10 @@ Head::Head(Game* game)
 	SpriteComponent* sc = new SpriteComponent(this);
 	sc->SetTexture(game->GetTexture("Assets/Head.png"));
 	Vector2 pos(float(rand() % Game::SCREEN_WIDTH), 0.0f); 
+
+	// Create a circle component (for collision)
+	mCircle = new CircleComponent(this);
+	mCircle->SetRadius(40.0f);
 	SetPosition(pos);
 	//WSB: don't need animated sprite, so we're done
 }

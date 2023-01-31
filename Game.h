@@ -29,6 +29,8 @@ public:
 	void RemoveSprite(class SpriteComponent* sprite);
 	
 	SDL_Texture* GetTexture(const std::string& fileName);
+	std::vector<class Head*>& GetHead() { return mHeads; }
+	
 private:
 	void ProcessInput();
 	void UpdateGame();
@@ -47,6 +49,8 @@ private:
 	// All the sprite components drawn
 	std::vector<class SpriteComponent*> mSprites;
 
+	std::vector<class Head*> mHeads;
+
 	SDL_Window* mWindow;
 	SDL_Renderer* mRenderer;
 	Uint32 mTicksCount;
@@ -57,6 +61,7 @@ private:
 	// Game-specific stuff -- WSB		
 	class Basket* mBasket;	// Player's basket
 	class Head*   mHead;	// Current falling head
+	class Ball* mball; //bullets
 	int   headsCaught_ = 0;
 	int   headsMissed_ = 0;
 

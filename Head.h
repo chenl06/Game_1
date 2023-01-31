@@ -17,7 +17,9 @@ public:
 	//void ProcessKeyboard(const uint8_t* state); //WSB
 	//float GetRightSpeed() const { return mRightSpeed; } //WSB
 	float GetDownSpeed() const { return mDownSpeed; }
+	class CircleComponent* GetCircle() { return mCircle; }
 private:
 	//float mRightSpeed; //WSB
 	float mDownSpeed;
+	class CircleComponent* mCircle;
 };

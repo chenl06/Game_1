@@ -15,6 +15,7 @@
     <ClCompile Include="AnimSpriteComponent.cpp" />
     <ClCompile Include="Ball.cpp" />
     <ClCompile Include="BGSpriteComponent.cpp" />
+    <ClCompile Include="CircleComponent.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Head.cpp" />
@@ -29,6 +30,7 @@
     <ClInclude Include="AnimSpriteComponent.h" />
     <ClInclude Include="Ball.h" />
     <ClInclude Include="BGSpriteComponent.h" />
+    <ClInclude Include="CircleComponent.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Head.h" />

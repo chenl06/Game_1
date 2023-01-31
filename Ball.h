@@ -1,5 +1,7 @@
 #pragma once
 #include "Actor.h"
+#include "Game.h"
+
 
 class Ball : public Actor
 {
@@ -8,6 +10,7 @@ public:
 	void UpdateActor(float deltaTime) override;
 
 private:
-	class BGSpriteComponent* ball;
+	class CircleComponent* mCircle;
+	Vector2 mBallPos;
 	float mDeathTimer;
 };
