@@ -1,35 +1,31 @@
-﻿  Actor.cpp
-  Ball.cpp
-  CircleComponent.cpp
-  Game.cpp
-C:\Users\luoc459\Desktop\code\Game_1\Game.cpp(103,41): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\luoc459\Desktop\code\Game_1\Game.cpp(108,31): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\luoc459\Desktop\code\Game_1\Game.cpp(108,31): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\luoc459\Desktop\code\Game_1\Game.cpp(108,42): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\luoc459\Desktop\code\Game_1\Game.cpp(108,42): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\luoc459\Desktop\code\Game_1\Game.cpp(111,31): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\luoc459\Desktop\code\Game_1\Game.cpp(111,31): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\luoc459\Desktop\code\Game_1\Game.cpp(111,42): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\luoc459\Desktop\code\Game_1\Game.cpp(111,42): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\luoc459\Desktop\code\Game_1\Game.cpp(117,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\luoc459\Desktop\code\Game_1\Game.cpp(128,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Head.cpp
-  Main.cpp
-C:\Users\luoc459\Desktop\code\Game_1\Main.cpp(15,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Basket.cpp
-  SpriteComponent.cpp
-  Generating Code...
-  Game.vcxproj -> C:\Users\luoc459\Desktop\code\Game_1\Debug\Game.exe
-  C:\Users\luoc459\Desktop\code\Game_1\\..\external\SDL\lib\win\x86\libfreetype-6.dll
-  C:\Users\luoc459\Desktop\code\Game_1\\..\external\SDL\lib\win\x86\libogg-0.dll
-  C:\Users\luoc459\Desktop\code\Game_1\\..\external\SDL\lib\win\x86\libpng16-16.dll
-  C:\Users\luoc459\Desktop\code\Game_1\\..\external\SDL\lib\win\x86\libvorbis-0.dll
-  C:\Users\luoc459\Desktop\code\Game_1\\..\external\SDL\lib\win\x86\libvorbisfile-3.dll
-  C:\Users\luoc459\Desktop\code\Game_1\\..\external\SDL\lib\win\x86\SDL2.dll
-  C:\Users\luoc459\Desktop\code\Game_1\\..\external\SDL\lib\win\x86\SDL2_image.dll
-  C:\Users\luoc459\Desktop\code\Game_1\\..\external\SDL\lib\win\x86\SDL2_mixer.dll
-  C:\Users\luoc459\Desktop\code\Game_1\\..\external\SDL\lib\win\x86\SDL2_ttf.dll
-  C:\Users\luoc459\Desktop\code\Game_1\\..\external\SDL\lib\win\x86\zlib1.dll
+﻿  Game.cpp
+C:\Users\luoc459\Desktop\code\code\Game_1\Game.cpp(106,41): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\luoc459\Desktop\code\code\Game_1\Game.cpp(112,31): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\luoc459\Desktop\code\code\Game_1\Game.cpp(112,31): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\luoc459\Desktop\code\code\Game_1\Game.cpp(112,42): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\luoc459\Desktop\code\code\Game_1\Game.cpp(112,42): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\luoc459\Desktop\code\code\Game_1\Game.cpp(116,31): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\luoc459\Desktop\code\code\Game_1\Game.cpp(116,31): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\luoc459\Desktop\code\code\Game_1\Game.cpp(116,42): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\luoc459\Desktop\code\code\Game_1\Game.cpp(116,42): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\luoc459\Desktop\code\code\Game_1\Game.cpp(122,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\luoc459\Desktop\code\code\Game_1\Game.cpp(129,34): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\luoc459\Desktop\code\code\Game_1\Game.cpp(129,34): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\luoc459\Desktop\code\code\Game_1\Game.cpp(129,47): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\luoc459\Desktop\code\code\Game_1\Game.cpp(129,47): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\luoc459\Desktop\code\code\Game_1\Game.cpp(135,36): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\luoc459\Desktop\code\code\Game_1\Game.cpp(143,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Game.vcxproj -> C:\Users\luoc459\Desktop\code\code\Game_1\Debug\Game.exe
+  C:\Users\luoc459\Desktop\code\code\Game_1\\..\external\SDL\lib\win\x86\libfreetype-6.dll
+  C:\Users\luoc459\Desktop\code\code\Game_1\\..\external\SDL\lib\win\x86\libogg-0.dll
+  C:\Users\luoc459\Desktop\code\code\Game_1\\..\external\SDL\lib\win\x86\libpng16-16.dll
+  C:\Users\luoc459\Desktop\code\code\Game_1\\..\external\SDL\lib\win\x86\libvorbis-0.dll
+  C:\Users\luoc459\Desktop\code\code\Game_1\\..\external\SDL\lib\win\x86\libvorbisfile-3.dll
+  C:\Users\luoc459\Desktop\code\code\Game_1\\..\external\SDL\lib\win\x86\SDL2.dll
+  C:\Users\luoc459\Desktop\code\code\Game_1\\..\external\SDL\lib\win\x86\SDL2_image.dll
+  C:\Users\luoc459\Desktop\code\code\Game_1\\..\external\SDL\lib\win\x86\SDL2_mixer.dll
+  C:\Users\luoc459\Desktop\code\code\Game_1\\..\external\SDL\lib\win\x86\SDL2_ttf.dll
+  C:\Users\luoc459\Desktop\code\code\Game_1\\..\external\SDL\lib\win\x86\zlib1.dll
   10 File(s) copied
-  C:\Users\luoc459\Desktop\code\Game_1\\..\external\GLEW\lib\win\x86\glew32.dll
+  C:\Users\luoc459\Desktop\code\code\Game_1\\..\external\GLEW\lib\win\x86\glew32.dll
   1 File(s) copied

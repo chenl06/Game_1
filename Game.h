@@ -10,6 +10,7 @@
 #pragma once
 #include "SDL/SDL.h"
 #include <unordered_map>
+#include "Actor.h"
 #include <string>
 #include <vector>
 
@@ -30,6 +31,7 @@ public:
 	
 	SDL_Texture* GetTexture(const std::string& fileName);
 	std::vector<class Head*>& GetHead() { return mHeads; }
+	std::vector<class Ball*>& GetBalls() { return mBalls; }
 	
 private:
 	void ProcessInput();
@@ -61,7 +63,7 @@ private:
 	// Game-specific stuff -- WSB		
 	class Basket* mBasket;	// Player's basket
 	class Head*   mHead;	// Current falling head
-	class Ball* mball; //bullets
+	std::vector<class Ball*> mBalls; // The amount of bullets on the screen
 	int   headsCaught_ = 0;
 	int   headsMissed_ = 0;
 

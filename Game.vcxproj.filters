@@ -43,9 +43,6 @@
     <ClCompile Include="Ball.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CircleComponent.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actor.h">
@@ -81,6 +78,5 @@
     <ClInclude Include="Ball.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="CircleComponent.h" />
   </ItemGroup>
 </Project>

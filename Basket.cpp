@@ -19,7 +19,7 @@ Basket::Basket(Game* game)
 	,mColdDown(0.0f)
 {
 	SpriteComponent* sc = new SpriteComponent(this);
-	sc->SetTexture(game->GetTexture("Assets/basket.png"));
+	sc->SetTexture(game->GetTexture("Assets/basketball.png"));
 }
 
 void Basket::UpdateActor(float deltaTime) //WSB: greatly simplified, as baskets only move l<->r

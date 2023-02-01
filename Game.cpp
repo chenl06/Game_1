@@ -10,10 +10,13 @@
 #include "SDL/SDL_image.h"
 #include <algorithm>
 #include "Actor.h"
+#include "Component.h"
 #include "SpriteComponent.h"
 #include "Basket.h"
 #include "Head.h"
+#include "Ball.h"
 #include "BGSpriteComponent.h"
+const int thickness = 15;
 
 Game::Game()
 :mWindow(nullptr)
@@ -103,11 +106,13 @@ void Game::UpdateGame()
 	mHead->SetRotation(mHead->GetRotation()+0.1);//could this overflow?  would we care?  Editor
 
 	//Check for collisions -- did I catch a head? --WSB
-	Vector2  headPos = mHead->GetPosition(), baskPos = mBasket->GetPosition();
+	Vector2  baskPos = mBasket->GetPosition();
+	Vector2 headPos = mHead->GetPosition();
 
-	SDL_Rect headRect = { headPos.x, headPos.y, ((SpriteComponent*)(*mHead)[0])->GetTexWidth(),   
-												((SpriteComponent*)(*mHead)[0])->GetTexHeight() 
-						};
+	SDL_Rect headRect = { headPos.x, headPos.y, ((SpriteComponent*)(*mBasket)[0])->GetTexWidth(),
+												((SpriteComponent*)(*mBasket)[0])->GetTexHeight()
+	};
+
 	SDL_Rect baskRect = { baskPos.x, baskPos.y, ((SpriteComponent*)(*mBasket)[0])->GetTexWidth(), 
 												((SpriteComponent*)(*mBasket)[0])->GetTexHeight() 
 						};
@@ -117,22 +122,19 @@ void Game::UpdateGame()
 		mHead->SetPosition(Vector2(rand() % 640, 25));
 	}
 
-	//Check if bullets catch the head
-	Vector2  headPos = mHead->GetPosition(), ballPos = mball->GetPosition();
-
-	SDL_Rect headRect = { headPos.x, headPos.y, ((SpriteComponent*)(*mHead)[0])->GetTexWidth(),
-												((SpriteComponent*)(*mHead)[0])->GetTexHeight()
-	};
-	SDL_Rect baskRect = { baskPos.x, baskPos.y, ((SpriteComponent*)(*mBasket)[0])->GetTexWidth(),
-												((SpriteComponent*)(*mBasket)[0])->GetTexHeight()
-	};
-	if (SDL_HasIntersection(&headRect, &baskRect)) //Got one!
+	//check for collision with every ball
+	for (auto ast : mBalls)
 	{
-		headsCaught_++;
-		mHead->SetPosition(Vector2(rand() % 640, 25));
+		Vector2 spritePos = ast->GetPosition();
+		SDL_Rect ballRect = { spritePos.x, spritePos.y, ((SpriteComponent*)(*ast)[0])->GetTexWidth(),
+														((SpriteComponent*)(*ast)[0])->GetTexHeight()
+		};
+
+		if (SDL_HasIntersection(&baskRect, &ballRect))
+		{
+			ast->SetPosition(Vector2(rand() % 640, 25));
+		}
 	}
-
-
 
 	//Check for misses -- did I miss a head? -- WSB
 	if (mHead->GetPosition().y > 480)
